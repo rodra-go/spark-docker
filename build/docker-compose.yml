@@ -16,6 +16,7 @@ services:
       - 4040:4040
     volumes:
       - shared-workspace:/opt/workspace
+      - /home/rcunha/workspace/p50_real_data:/opt/p50_real_data
   spark-master:
     image: spark-master:3.0.0
     container_name: spark-master
