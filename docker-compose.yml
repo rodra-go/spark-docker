@@ -29,8 +29,8 @@ services:
     image: andreper/spark-worker:3.0.0
     container_name: spark-worker-1
     environment:
-      - SPARK_WORKER_CORES=16
-      - SPARK_WORKER_MEMORY=4096m
+      - SPARK_WORKER_CORES=4
+      - SPARK_WORKER_MEMORY=512m
     ports:
       - 8081:8081
     volumes:
