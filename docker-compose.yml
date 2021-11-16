@@ -5,7 +5,7 @@
 version: "3.6"
 volumes:
   shared-workspace:
-    name: "hadoop-distributed-file-system"
+    name: "hadoop-distributed-file-system-local"
     driver: local
     driver_opts:
       type: none
