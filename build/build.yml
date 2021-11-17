@@ -2,6 +2,6 @@ applications:
   spark: "3.0.0"
   jupyterlab: "3.0.0"
 build:
-  build_base: "true"
+  build_base: "false"
   build_spark: "true"
-  build_jupyterlab: "true"
+  build_jupyterlab: "false"

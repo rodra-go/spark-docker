@@ -29,6 +29,8 @@ ENV SPARK_MASTER_HOST spark-master
 ENV SPARK_MASTER_PORT 7077
 ENV PYSPARK_PYTHON python3
 
+ADD docker/spark-base/spark-defaults.conf /usr/bin/spark-${spark_version}-bin-hadoop${hadoop_version}/conf
+
 # -- Runtime
 
 WORKDIR ${SPARK_HOME}

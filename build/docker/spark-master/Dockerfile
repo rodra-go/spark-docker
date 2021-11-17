@@ -16,4 +16,4 @@ LABEL org.label-schema.schema-version="1.0"
 
 EXPOSE 8080 7077
 
-CMD bin/spark-class org.apache.spark.deploy.master.Master >> logs/spark-master.out
+CMD bin/spark-class org.apache.spark.deploy.master.Master --properties-file conf/spark-defaults.conf >> logs/spark-master.out
