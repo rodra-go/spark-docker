@@ -13,6 +13,7 @@ volumes:
       o: bind
 
   metastore_db:
+    name: "spark_metastore_db"
 
 services:
   jupyterlab:
