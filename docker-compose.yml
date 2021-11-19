@@ -25,7 +25,6 @@ services:
       - shared-workspace:/opt/workspace
 
   metastore_db:
-    image: mysql:8.0.16
     container_name: metastore_db
     restart: always
     build: build/docker/mysql_metastore_db
