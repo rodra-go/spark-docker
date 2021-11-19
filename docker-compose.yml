@@ -28,6 +28,8 @@ services:
     image: mysql:8.0.16
     container_name: metastore_db
     restart: always
+    build: build/docker/mysql_metastore_db
+    shm_size: '2gb'
     environment:
       MYSQL_DATABASE: 'metastore_db'
       MYSQL_USER: 'user'
@@ -35,8 +37,6 @@ services:
       MYSQL_ROOT_PASSWORD: 'password'
     ports:
       - '3306:3306'
-    expose:
-      - '3306'
     volumes:
       - metastore_db:/var/lib/mysql
 
@@ -54,6 +54,8 @@ services:
     image: spark-worker:3.0.0
     container_name: spark-worker-1
     environment:
+      # - SPARK_WORKER_CORES=1
+      # - SPARK_WORKER_MEMORY=512m
       - SPARK_WORKER_CORES=16
       - SPARK_WORKER_MEMORY=2048m
     ports:
@@ -67,6 +69,8 @@ services:
     image: spark-worker:3.0.0
     container_name: spark-worker-2
     environment:
+      # - SPARK_WORKER_CORES=1
+      # - SPARK_WORKER_MEMORY=512m
       - SPARK_WORKER_CORES=16
       - SPARK_WORKER_MEMORY=2048m
     ports:
