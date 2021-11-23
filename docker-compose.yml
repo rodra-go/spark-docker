@@ -97,7 +97,7 @@ services:
     environment:
       - CLUSTER_NAME=test
     env_file:
-      - ./hadoop.env
+      - ./build/docker/hadoop.env
 
   datanode:
     image: hadoop-datanode:2.0.0-hadoop3.2.1-java8
@@ -108,7 +108,7 @@ services:
     environment:
       SERVICE_PRECONDITION: "namenode:9870"
     env_file:
-      - ./hadoop.env
+      - ./build/docker/hadoop.env
 
   resourcemanager:
     image: hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
@@ -117,7 +117,7 @@ services:
     environment:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864"
     env_file:
-      - ./hadoop.env
+      - ./build/docker/hadoop.env
 
   nodemanager1:
     image: hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
@@ -137,4 +137,4 @@ services:
     volumes:
       - hadoop_historyserver:/hadoop/yarn/timeline
     env_file:
-      - ./hadoop.env
+      - ./build/docker/hadoop.env
