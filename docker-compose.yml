@@ -169,5 +169,7 @@ networks:
   spark-network:
     driver: overlay
     attachable: true
-    config:
-      - subnet: 10.5.0.0/16
+    ipam:
+       driver: default
+       config:
+         - subnet: 10.5.0.0/16
