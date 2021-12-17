@@ -1,5 +1,5 @@
 FROM mysql:8.0.16
 
-COPY conf.d /etc/mysql/conf.d
+COPY config-file.cnf /etc/mysql/conf.d/config-file.cnf
 
 EXPOSE 3306
