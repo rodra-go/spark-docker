@@ -36,6 +36,7 @@ services:
   metastore_db:
     container_name: metastore_db
     restart: always
+    image: mysql:8.0.16-hive-2.3.0
     build: build/docker/mysql_metastore_db
     shm_size: '2gb'
     environment:
