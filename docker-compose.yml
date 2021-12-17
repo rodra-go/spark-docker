@@ -9,7 +9,7 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/rodra/workspace/spark-standalone-cluster-on-docker/virtual_hpfs
+      device: ./virtual_hpfs
       o: bind
   metastore_db:
     name: "spark_metastore_db"
