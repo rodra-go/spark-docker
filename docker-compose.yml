@@ -30,6 +30,7 @@ services:
       - 4040:4040
     volumes:
       - shared-workspace:/opt/workspace
+      - /home/rcunha/workspace/sgs_data:/opt/workspace/sgs
     networks:
       spark-network:
 
